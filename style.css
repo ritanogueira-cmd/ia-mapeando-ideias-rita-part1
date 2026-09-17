@@ -1,0 +1,340 @@
+/* ==========================================
+   VARIÁVEIS DE CORES E PALETA PASTEL
+   ========================================== */
+:root {
+  --bg-dots: #fbf7f4;
+  --dot-color: #e5d7d3;
+  
+  --rosa-claro: #ffe4e9;
+  --rosa-escuro: #8c3b52;
+  
+  --azul-claro: #e0f2fe;
+  --azul-escuro: #1e40af;
+  
+  --verde-claro: #dcfce7;
+  --verde-escuro: #166534;
+  
+  --amarelo-detalhe: #fef08a;
+  
+  --texto-principal: #2d3748;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================
+   ESTILOS GERAIS & DECORAÇÃO (POLKA DOTS / LISTRAS)
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dots);
+  /* Padrão Polka Dots (Bolinhas) */
+  background-image: radial-gradient(var(--dot-color) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  color: var(--texto-principal);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+/* Listras decorativas no cabeçalho */
+.banner-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--rosa-claro),
+    var(--rosa-claro) 15px,
+    var(--azul-claro) 15px,
+    var(--azul-claro) 30px,
+    var(--verde-claro) 30px,
+    var(--verde-claro) 45px
+  );
+  height: 12px;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.3rem;
+  color: var(--rosa-escuro);
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  border-radius: 30px;
+  border: 3px dashed var(--rosa-claro);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.subtitle {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #5a6578;
+  font-weight: 600;
+}
+
+/* ==========================================
+   GRID DE CARDS
+   ========================================== */
+.container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Estilo do Card Base */
+.card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 16px var(--shadow-color);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Fita decorativa topo do card */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+/* Variação de Cores - Rosa */
+.card.rosa {
+  border-color: #fbcfe8;
+}
+.card.rosa::before { 
+  background-color: #f472b6; 
+}
+.card.rosa .tag { 
+  background-color: var(--rosa-claro); 
+  color: var(--rosa-escuro); 
+}
+.card.rosa h3 { 
+  color: var(--rosa-escuro); 
+}
+
+/* Variação de Cores - Azul */
+.card.azul {
+  border-color: #bae6fd;
+}
+.card.azul::before { 
+  background-color: #38bdf8; 
+}
+.card.azul .tag { 
+  background-color: var(--azul-claro); 
+  color: var(--azul-escuro); 
+}
+.card.azul h3 { 
+  color: var(--azul-escuro); 
+}
+
+/* Variação de Cores - Verde */
+.card.verde {
+  border-color: #bbf7d0;
+}
+.card.verde::before { 
+  background-color: #4ade80; 
+}
+.card.verde .tag { 
+  background-color: var(--verde-claro); 
+  color: var(--verde-escuro); 
+}
+.card.verde h3 { 
+  color: var(--verde-escuro); 
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.icon {
+  font-size: 1.8rem;
+}
+
+.card h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+.btn-detalhes {
+  align-self: flex-start;
+  background: #f3f4f6;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #4b5563;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card:hover .btn-detalhes {
+  background: var(--amarelo-detalhe);
+  color: #713f12;
+}
+
+/* ==========================================
+   ESTILOS DO MODAL
+   ========================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(45, 55, 72, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  border: 4px solid var(--rosa-claro);
+}
+
+.modal-overlay.active .modal {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: #f3f4f6;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #4b5563;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.modal-close:hover {
+  background: var(--rosa-claro);
+  color: var(--rosa-escuro);
+}
+
+.modal-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--rosa-escuro);
+}
+
+.modal-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.modal-section {
+  margin-top: 1.2rem;
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.modal-section.impact-section {
+  border-left: 4px solid #38bdf8;
+}
+
+.modal-section.solution-section {
+  border-left: 4px solid #4ade80;
+}
+
+.modal-section h4 {
+  font-family: 'Fredoka', sans-serif;
+  margin-bottom: 0.3rem;
+  color: #1f2937;
+}
+
+/* Rodapé */
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #888;
+  text-align: center;
+}
+
+footer span {
+  color: #f472b6;
+}

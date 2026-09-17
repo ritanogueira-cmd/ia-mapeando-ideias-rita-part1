@@ -5,142 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Organizador de estudos da Rita</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Fonte com estilo HQ / Futurista Glitch -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&family=VT323&family=Fredoka+One&display=swap">
 </head>
 <body>
 
-  <!-- Cabeçalho -->
-  <header class="header">
-    <div class="logo-container">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Invader_Zim_logo.svg" alt="Invader Zim Logo" class="zim-logo">
+  <div class="container">
+    <header>
       <h1>Organizador de estudos da Rita</h1>
-    </div>
-    <p class="subtitle">Aniquilando o caos e dominando a rotina escolar humana!</p>
-  </header>
+      <p>SISTEMA IRKEN DE ORGANIZAÇÃO CONTRA A PROCRASTINAÇÃO DA TERRA</p>
+    </header>
 
-  <!-- Container de Cards -->
-  <main class="cards-container">
-
-    <!-- Card 1: Zim -->
-    <div class="card" onclick="openModal('modal-procrastinacao')">
-      <div class="card-image-wrapper">
-        <img src="https://images.fineartamerica.com/images/interactive/images/001-invader-zim.png" alt="Zim" class="char-img">
-      </div>
-      <div class="card-content">
-        <span class="badge badge-zim">Problema Crucial</span>
-        <h2>Procrastinação Alienígena</h2>
-        <p>Deixar tudo para a última hora por achar que o plano de estudos é invencível...</p>
-        <button class="btn-card">Analisar Ameaça</button>
-      </div>
+    <!-- Banner Zim & Gir -->
+    <div class="banner-container">
+      <img src="watermarked_img_12610501427447471305.jpg" alt="Invasor Zim e Gir">
     </div>
 
-    <!-- Card 2: GIR -->
-    <div class="card" onclick="openModal('modal-foco')">
-      <div class="card-image-wrapper">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/GIR_Invader_Zim.png/180px-GIR_Invader_Zim.png" alt="GIR" class="char-img">
+    <!-- Seção 1: Problemas Reais na Organização -->
+    <h2 class="section-title">👾 Problemas Reais de Organização</h2>
+    <div class="cards-grid">
+
+      <div class="card" onclick="openModal('Falta de Cronograma Definido', 'Problema Real', 'Estudantes acumulam tarefas por não saberem exatamente quanto tempo leva cada atividade ou quando estudá-la.', 'A Estratégia Irken: Dividir prazos longos em pequenos blocos diários de 25 minutos. Não tente conquistar tudo em um só dia!')">
+        <div class="card-tag">Problema Real</div>
+        <div class="card-title">Acúmulo por Falta de Prazos</div>
+        <div class="card-snippet">Não saber o tempo certo de cada tarefa faz tudo acumular para a véspera.</div>
+        <div class="card-footer">Clique para analisar →</div>
       </div>
-      <div class="card-content">
-        <span class="badge badge-gir">Incômodo Diário</span>
-        <h2>Atenção de Ratinho (GIR)</h2>
-        <p>Distrações com notificações, redes sociais e vontades repentinas de comer waffles.</p>
-        <button class="btn-card">Analisar Ameaça</button>
+
+      <div class="card" onclick="openModal('Técnicas Ineficientes de Estudo', 'Problema Real', 'Ler o mesmo livro texto por horas sem retenção real de conteúdo ou resumos passivos que desperdiçam tempo.', 'A Estratégia Irken: Troque a leitura passiva por resolução de questões e flashes de revisão ativa (Flashcards).')">
+        <div class="card-tag">Problema Real</div>
+        <div class="card-title">Estudo Passivo Ineficiente</div>
+        <div class="card-snippet">Gastar horas lendo textos sem realmente absorver ou fixar o conteúdo.</div>
+        <div class="card-footer">Clique para analisar →</div>
       </div>
+
+      <div class="card" onclick="openModal('Falta de Priorização', 'Problema Real', 'Tentar fazer todas as matérias ao mesmo tempo e acabar não concluindo as mais urgentes ou difíceis.', 'A Estratégia Irken: Matriz de Eisenhower — Separe tarefas entre Urgente vs Importante antes de começar o dia.')">
+        <div class="card-tag">Problema Real</div>
+        <div class="card-title">Sobrecarga de Matérias</div>
+        <div class="card-snippet">Tentar abraçar todo o conteúdo de uma vez e travar no processo.</div>
+        <div class="card-footer">Clique para analisar →</div>
+      </div>
+
     </div>
 
-    <!-- Card 3: Dib -->
-    <div class="card" onclick="openModal('modal-sobrecarga')">
-      <div class="card-image-wrapper">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Dib_Membrane.png/180px-Dib_Membrane.png" alt="Dib" class="char-img">
-      </div>
-      <div class="card-content">
-        <span class="badge badge-dib">Insatisfação</span>
-        <h2>Sobrecarga de Matérias</h2>
-        <p>Sensação de paranoia por ter acúmulo de conteúdos e prazos estourando!</p>
-        <button class="btn-card">Analisar Ameaça</button>
-      </div>
-    </div>
+    <!-- Seção 2: Incômodos e Insatisfações do Dia a Dia -->
+    <h2 class="section-title">🛸 Incômodos & Insatisfações Diárias</h2>
+    <div class="cards-grid">
 
-    <!-- Card 4: Gaz -->
-    <div class="card" onclick="openModal('modal-sono')">
-      <div class="card-image-wrapper">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/11/Gaz_Membrane.png/180px-Gaz_Membrane.png" alt="Gaz" class="char-img">
+      <div class="card" onclick="openModal('Distrações e Notificações (GIR Distractions)', 'Incômodo Diário', 'O celular e redes sociais interrompem o foco a cada 10 minutos, causando o efeito de atenção fragmentada.', 'A Estratégia Irken: Ative o Modo de Isolamento Tecnológico. Deixe o celular em outro cômodo durante os blocos de estudo primários.')">
+        <div class="card-tag">Incômodo Diário</div>
+        <div class="card-title">Vício em Telas e Notificações</div>
+        <div class="card-snippet">O impulso constante de olhar redes sociais corta o estado de fluxo de estudo.</div>
+        <div class="card-footer">Clique para analisar →</div>
       </div>
-      <div class="card-content">
-        <span class="badge badge-gaz">Rotina Destruída</span>
-        <h2>Cansaço & Mal-Estar</h2>
-        <p>Noites mal dormidas estragando o humor e o desempenho nos exames.</p>
-        <button class="btn-card">Analisar Ameaça</button>
+
+      <div class="card" onclick="openModal('Cansaço Mental e Esgotamento', 'Incômodo Diário', 'Estudar até tarde da noite resulta em esgotamento e baixa retenção de conhecimento no dia seguinte.', 'A Estratégia Irken: Respeite os ciclos de descanso e sono. O cérebro humano precisa consolidar memórias enquanto dorme!')">
+        <div class="card-tag">Incômodo Diário</div>
+        <div class="card-title">Exaustão Mental / Burnout</div>
+        <div class="card-snippet">Estudar sob extremo cansaço gera a falsa sensação de produtividade.</div>
+        <div class="card-footer">Clique para analisar →</div>
       </div>
-    </div>
 
-  </main>
-
-  <!-- MODAIS (Pop-ups) -->
-
-  <!-- Modal 1 -->
-  <div id="modal-procrastinacao" class="modal-overlay">
-    <div class="modal-content border-zim">
-      <span class="close-btn" onclick="closeModal('modal-procrastinacao')">&times;</span>
-      <h2>⚠️ Procrastinação do Império Irken</h2>
-      <p><strong>Incômodo:</strong> Deixar trabalhos e revisões para a véspera, gerando pânico e noites acordado.</p>
-      <p><strong>Causa Humana:</strong> Falta de metas curtas e sensação de que a matéria é um monstro gigante.</p>
+      <div class="card" onclick="openModal('Sentimento de Insatisfação / Procrastinação', 'Incômodo Diário', 'Sensação de culpa constante por sentir que deveria estar estudando, mesmo nas horas livres.', 'A Estratégia Irken: Defina um horário claro de início e FIM dos estudos para poder descansar sem sentimento de culpa.')">
+        <div class="card-tag">Incômodo Diário</div>
+        <div class="card-title">Culpa Improdutiva Constante</div>
+        <div class="card-snippet">A incapacidade de se desligar dos estudos gera ansiedade e frustração.</div>
+        <div class="card-footer">Clique para analisar →</div>
+      </div>
 
     </div>
   </div>
 
-  <!-- Modal 2 -->
-  <div id="modal-foco" class="modal-overlay">
-    <div class="modal-content border-gir">
-      <span class="close-btn" onclick="closeModal('modal-foco')">&times;</span>
-      <h2>🌮 Modo GIR: Perda Total de Foco</h2>
-      <p><strong>Incômodo:</strong> Abrir o livro e, 2 minutos depois, estar vendo vídeos aleatórios na internet ou buscando comida.</p>
-      <p><strong>Causa Humana:</strong> Excesso de estímulos visuais e ausência de sessões organizadas de estudo (ex: Técnica Pomodoro).</p>
-
+  <!-- Modal Component -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">✕</button>
+      <span class="modal-header-tag" id="modalTag">CATEGORIA</span>
+      <h3 class="modal-title" id="modalTitle">Título do Card</h3>
+      <div class="modal-body">
+        <p id="modalDesc">Descrição detalhada do problema analisado pelo sistema.</p>
+        <div class="modal-solution">
+          <h4>⚡ Solução do Sistema ZIM:</h4>
+          <p id="modalSolutionText">Estratégia para combater este incômodo.</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Modal 3 -->
-  <div id="modal-sobrecarga" class="modal-overlay">
-    <div class="modal-content border-dib">
-      <span class="close-btn" onclick="closeModal('modal-sobrecarga')">&times;</span>
-      <h2>👽 Teorias e Sobrecarga de Tarefas</h2>
-      <p><strong>Incômodo:</strong> Não saber por onde começar a estudar devido à imensa quantidade de anotações desorganizadas.</p>
-      <p><strong>Causa Humana:</strong> Ausência de um cronograma semanal claro e priorização do que é mais urgente.</p>
-
-    </div>
-  </div>
-
-  <!-- Modal 4 -->
-  <div id="modal-sono" class="modal-overlay">
-    <div class="modal-content border-gaz">
-      <span class="close-btn" onclick="closeModal('modal-sono')">&times;</span>
-      <h2>🎮 Bateria Social e Sono Zerados</h2>
-      <p><strong>Incômodo:</strong> Irritabilidade, falta de retenção de memória e fadiga extrema na sala de aula.</p>
-      <p><strong>Causa Humana:</strong> Hábitos ruins antes de dormir (telas, videogame) e falta de pausa planejada durante os estudos.</p>
-
-    </div>
-  </div>
-
-  <!-- Script simples para controlar a abertura/fechamento dos Modais -->
   <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = 'flex';
+    function openModal(title, tag, description, solution) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalTag').innerText = tag;
+      document.getElementById('modalDesc').innerText = description;
+      document.getElementById('modalSolutionText').innerText = solution;
+
+      document.getElementById('modalOverlay').classList.add('active');
     }
 
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('active');
     }
 
-    // Fechar se clicar fora do conteúdo do modal
-    window.onclick = function(event) {
-      const modals = document.querySelectorAll('.modal-overlay');
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
-    }
+    document.getElementById('modalOverlay').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
   </script>
 </body>
 </html>

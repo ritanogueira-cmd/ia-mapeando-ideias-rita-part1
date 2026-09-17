@@ -3,108 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZIM-STUDY: Protocolo de Organização Alienígena</title>
+  <title>Organizador de estudos da Rita</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Fonte com estilo HQ / Futurista Glitch -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Creepster&family=VT323&family=Fredoka+One&display=swap">
 </head>
 <body>
 
-  <!-- CABEÇALHO DA APLICAÇÃO -->
-  <header>
-    <h1>PROTO-ZIM // ESTUDOS</h1>
-    <p>Mapeamento de Obstáculos da Rotina de Estudo Humana</p>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Invader_Zim_logo.svg" alt="Invader Zim Logo" class="zim-logo">
+      <h1>Organizador de estudos da Rita</h1>
+    </div>
+    <p class="subtitle">Aniquilando o caos e dominando a rotina escolar humana!</p>
   </header>
 
-  <!-- GRID DE CARDS -->
-  <main class="cards-grid">
+  <!-- Container de Cards -->
+  <main class="cards-container">
 
-    <!-- CARD 1 -->
-    <article class="card">
-      <div>
-        <span class="card-tag">Problema #01</span>
-        <h2>Procrastinação & Distrações Digitais</h2>
-        <p>Incapacidade de focar na tarefa atual devido às tentações do mundo virtual e redes sociais.</p>
+    <!-- Card 1: Zim -->
+    <div class="card" onclick="openModal('modal-procrastinacao')">
+      <div class="card-image-wrapper">
+        <img src="https://images.fineartamerica.com/images/interactive/images/001-invader-zim.png" alt="Zim" class="char-img">
       </div>
-      <label for="modal-1" class="btn-open">Analisar Ameaça</label>
-    </article>
+      <div class="card-content">
+        <span class="badge badge-zim">Problema Crucial</span>
+        <h2>Procrastinação Alienígena</h2>
+        <p>Deixar tudo para a última hora por achar que o plano de estudos é invencível...</p>
+        <button class="btn-card">Analisar Ameaça</button>
+      </div>
+    </div>
 
-    <!-- CARD 2 -->
-    <article class="card">
-      <div>
-        <span class="card-tag">Problema #02</span>
-        <h2>Sobrecarga de Conteúdo</h2>
-        <p>Falta de clareza sobre o que estudar primeiro, levando ao acúmulo de matérias e pânico.</p>
+    <!-- Card 2: GIR -->
+    <div class="card" onclick="openModal('modal-foco')">
+      <div class="card-image-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/GIR_Invader_Zim.png/180px-GIR_Invader_Zim.png" alt="GIR" class="char-img">
       </div>
-      <label for="modal-2" class="btn-open">Analisar Ameaça</label>
-    </article>
+      <div class="card-content">
+        <span class="badge badge-gir">Incômodo Diário</span>
+        <h2>Atenção de Ratinho (GIR)</h2>
+        <p>Distrações com notificações, redes sociais e vontades repentinas de comer waffles.</p>
+        <button class="btn-card">Analisar Ameaça</button>
+      </div>
+    </div>
 
-    <!-- CARD 3 -->
-    <article class="card">
-      <div>
-        <span class="card-tag">Problema #03</span>
-        <h2>Ambiente & Cansaço Mental</h2>
-        <p>Falta de rotina, espaço desorganizado e esgotamento físico que impedem a absorção do estudo.</p>
+    <!-- Card 3: Dib -->
+    <div class="card" onclick="openModal('modal-sobrecarga')">
+      <div class="card-image-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Dib_Membrane.png/180px-Dib_Membrane.png" alt="Dib" class="char-img">
       </div>
-      <label for="modal-3" class="btn-open">Analisar Ameaça</label>
-    </article>
+      <div class="card-content">
+        <span class="badge badge-dib">Insatisfação</span>
+        <h2>Sobrecarga de Matérias</h2>
+        <p>Sensação de paranoia por ter acúmulo de conteúdos e prazos estourando!</p>
+        <button class="btn-card">Analisar Ameaça</button>
+      </div>
+    </div>
+
+    <!-- Card 4: Gaz -->
+    <div class="card" onclick="openModal('modal-sono')">
+      <div class="card-image-wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/11/Gaz_Membrane.png/180px-Gaz_Membrane.png" alt="Gaz" class="char-img">
+      </div>
+      <div class="card-content">
+        <span class="badge badge-gaz">Rotina Destruída</span>
+        <h2>Cansaço & Mal-Estar</h2>
+        <p>Noites mal dormidas estragando o humor e o desempenho nos exames.</p>
+        <button class="btn-card">Analisar Ameaça</button>
+      </div>
+    </div>
 
   </main>
 
-  <!-- ==================== MODAIS (CSS ONLY) ==================== -->
+  <!-- MODAIS (Pop-ups) -->
 
-  <!-- MODAL 1 -->
-  <input type="checkbox" id="modal-1" class="modal-toggle">
-  <div class="modal-overlay">
-    <div class="modal-box">
-      <label for="modal-1" class="btn-close">X</label>
-      <h3>DISTRAÇÕES DIGITAIS</h3>
-      <p class="modal-subtitle-magenta"><strong>Incômodos Identificados:</strong></p>
-      <ul>
-        <li>Checar o celular a cada 5 minutos involuntariamente.</li>
-        <li>Dificuldade em iniciar tarefas longas e complexas.</li>
-        <li>Sensação de culpa ao ver o tempo passar sem produzir.</li>
-      </ul>
-      <p class="modal-subtitle-green"><strong>Diretriz do Computador Irken:</strong></p>
-      <p class="modal-text">Ativar o modo de isolamento do dispositivo (Pomodoro/Bloqueador de apps) e dividir o estudo em blocos de 25 minutos de hiperfoco.</p>
+  <!-- Modal 1 -->
+  <div id="modal-procrastinacao" class="modal-overlay">
+    <div class="modal-content border-zim">
+      <span class="close-btn" onclick="closeModal('modal-procrastinacao')">&times;</span>
+      <h2>⚠️ Procrastinação do Império Irken</h2>
+      <p><strong>Incômodo:</strong> Deixar trabalhos e revisões para a véspera, gerando pânico e noites acordado.</p>
+      <p><strong>Causa Humana:</strong> Falta de metas curtas e sensação de que a matéria é um monstro gigante.</p>
+
     </div>
   </div>
 
-  <!-- MODAL 2 -->
-  <input type="checkbox" id="modal-2" class="modal-toggle">
-  <div class="modal-overlay">
-    <div class="modal-box">
-      <label for="modal-2" class="btn-close">X</label>
-      <h3>SOBRECARGA DE TAREFAS</h3>
-      <p class="modal-subtitle-magenta"><strong>Incômodos Identificados:</strong></p>
-      <ul>
-        <li>Sensação contínua de "estar devendo matéria".</li>
-        <li>Não saber por onde começar diante de prazos apertados.</li>
-        <li>Listas de tarefas gigantescas e irrealistas.</li>
-      </ul>
-      <p class="modal-subtitle-green"><strong>Diretriz do Computador Irken:</strong></p>
-      <p class="modal-text">Aplicar a Matriz de Eisenhower. Definir apenas 3 tarefas prioritárias por dia. Eliminar ou adiar tarefas sem urgência real.</p>
+  <!-- Modal 2 -->
+  <div id="modal-foco" class="modal-overlay">
+    <div class="modal-content border-gir">
+      <span class="close-btn" onclick="closeModal('modal-foco')">&times;</span>
+      <h2>🌮 Modo GIR: Perda Total de Foco</h2>
+      <p><strong>Incômodo:</strong> Abrir o livro e, 2 minutos depois, estar vendo vídeos aleatórios na internet ou buscando comida.</p>
+      <p><strong>Causa Humana:</strong> Excesso de estímulos visuais e ausência de sessões organizadas de estudo (ex: Técnica Pomodoro).</p>
+
     </div>
   </div>
 
-  <!-- MODAL 3 -->
-  <input type="checkbox" id="modal-3" class="modal-toggle">
-  <div class="modal-overlay">
-    <div class="modal-box">
-      <label for="modal-3" class="btn-close">X</label>
-      <h3>CANSAÇO E DESORGANIZAÇÃO</h3>
-      <p class="modal-subtitle-magenta"><strong>Incômodos Identificados:</strong></p>
-      <ul>
-        <li>Mesa bagunçada que distrai o foco visual.</li>
-        <li>Sono excessivo e falta de energia durante as leituras.</li>
-        <li>Mudanças constantes de horário que quebram o hábito.</li>
-      </ul>
-      <p class="modal-subtitle-green"><strong>Diretriz do Computador Irken:</strong></p>
-      <p class="modal-text">Criar um ritual de preparação de 5 minutos (limpar a mesa, água do lado) e fixar horários rígidos para descanso/sono.</p>
+  <!-- Modal 3 -->
+  <div id="modal-sobrecarga" class="modal-overlay">
+    <div class="modal-content border-dib">
+      <span class="close-btn" onclick="closeModal('modal-sobrecarga')">&times;</span>
+      <h2>👽 Teorias e Sobrecarga de Tarefas</h2>
+      <p><strong>Incômodo:</strong> Não saber por onde começar a estudar devido à imensa quantidade de anotações desorganizadas.</p>
+      <p><strong>Causa Humana:</strong> Ausência de um cronograma semanal claro e priorização do que é mais urgente.</p>
+
     </div>
   </div>
 
-  <footer>
-    <p>PROTÓTIPO DE DIAGNÓSTICO // IMPÉRIO IRKEN ©</p>
-  </footer>
+  <!-- Modal 4 -->
+  <div id="modal-sono" class="modal-overlay">
+    <div class="modal-content border-gaz">
+      <span class="close-btn" onclick="closeModal('modal-sono')">&times;</span>
+      <h2>🎮 Bateria Social e Sono Zerados</h2>
+      <p><strong>Incômodo:</strong> Irritabilidade, falta de retenção de memória e fadiga extrema na sala de aula.</p>
+      <p><strong>Causa Humana:</strong> Hábitos ruins antes de dormir (telas, videogame) e falta de pausa planejada durante os estudos.</p>
 
+    </div>
+  </div>
+
+  <!-- Script simples para controlar a abertura/fechamento dos Modais -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    // Fechar se clicar fora do conteúdo do modal
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal-overlay');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>

@@ -1,222 +1,240 @@
-/* Resets básicos */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Orbitron:wght@600;900&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --bg-dark: #0f0a1c;
+  --card-bg: #1e1333;
+  --border-purple: #8125b2;
+  --zim-green: #39ff14;
+  --gir-magenta: #ff007f;
+  --text-light: #f0e6ff;
+  --shadow-neon: 0 0 15px rgba(57, 255, 20, 0.4);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Fredoka One', cursive, sans-serif;
 }
 
-/* Estilo do Fundo e Cores Globais da Série Invader Zim */
 body {
-  background-color: #0f0a17; /* Roxo ultra escuro */
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
   background-image: 
-    radial-gradient(#1f1235 15%, transparent 16%),
-    radial-gradient(#1f1235 15%, transparent 16%);
-  background-size: 60px 60px;
-  background-position: 0 0, 30px 30px;
-  color: #ffffff;
-  padding: 20px;
-  min-height: 100vh;
+    radial-gradient(circle at 10% 20%, rgba(129, 37, 178, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(57, 255, 20, 0.1) 0%, transparent 40%);
 }
 
-/* Cabeçalho */
-.header {
+/* Cabeçalho do App */
+header {
   text-align: center;
-  margin-bottom: 40px;
-  padding: 20px;
-  border-bottom: 4px solid #00ff66; /* Verde Irken */
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--gir-magenta);
+  padding-bottom: 20px;
 }
 
-.logo-container {
+header h1 {
+  font-family: 'Orbitron', cursive;
+  font-size: 2.5rem;
+  color: var(--zim-green);
+  text-shadow: 0 0 10px var(--zim-green), 3px 3px 0px var(--gir-magenta);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header p {
+  font-size: 1rem;
+  color: var(--gir-magenta);
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.banner-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
-.zim-logo {
-  height: 60px;
-  filter: drop-shadow(0px 0px 8px #00ff66);
+.banner-container img {
+  max-width: 450px;
+  width: 100%;
+  border-radius: 12px;
+  border: 3px solid var(--zim-green);
+  box-shadow: var(--shadow-neon);
 }
 
-.header h1 {
-  font-family: 'VT323', monospace;
-  font-size: 2.8rem;
-  color: #00ff66;
-  text-shadow: 3px 3px 0px #800080, -2px -2px 0px #000;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.subtitle {
-  color: #ff007f; /* Rosa choque / Gir */
-  font-size: 1.1rem;
-  margin-top: 10px;
-}
-
-/* Container de Cards */
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+.container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Estilo do Card */
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--zim-green);
+  margin: 30px 0 15px 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border-left: 5px solid var(--gir-magenta);
+  padding-left: 10px;
+}
+
+/* Grid de Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Estilo dos Cards */
 .card {
-  background: #1a102a;
-  border: 4px solid #3d2263;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 6px 6px 0px #000;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  background: var(--card-bg);
+  border: 2px solid var(--border-purple);
+  border-radius: 8px;
+  padding: 20px;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--gir-magenta);
 }
 
 .card:hover {
-  transform: translateY(-8px) rotate(-1deg);
-  border-color: #00ff66;
-  box-shadow: 8px 8px 0px #00ff66;
+  transform: translateY(-5px);
+  border-color: var(--zim-green);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
 }
 
-/* Imagens dentro dos Cards */
-.card-image-wrapper {
-  background-color: #2b1845;
-  text-align: center;
-  padding: 15px;
-  border-bottom: 3px solid #000;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.char-img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  filter: drop-shadow(2px 4px 0px rgba(0,0,0,0.5));
-}
-
-/* Conteúdo do Card */
-.card-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex-grow: 1;
-}
-
-.card-content h2 {
-  font-size: 1.3rem;
-  color: #fff;
-}
-
-.card-content p {
-  font-size: 0.9rem;
-  color: #bfa8dd;
-  line-height: 1.3;
-}
-
-/* Badges */
-.badge {
-  align-self: flex-start;
-  padding: 4px 10px;
-  border-radius: 4px;
+.card-tag {
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
-  border: 2px solid #000;
+  color: var(--zim-green);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
-.badge-zim { background-color: #00ff66; color: #000; }
-.badge-gir { background-color: #ff007f; color: #fff; }
-.badge-dib { background-color: #00d9ff; color: #000; }
-.badge-gaz { background-color: #9d00ff; color: #fff; }
-
-/* Botão do Card */
-.btn-card {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #800080;
-  color: #fff;
-  border: 2px solid #000;
-  border-radius: 6px;
+.card-title {
+  font-size: 1.2rem;
   font-weight: bold;
-  cursor: pointer;
-  box-shadow: 3px 3px 0px #000;
-  transition: background 0.2s;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-.card:hover .btn-card {
-  background-color: #00ff66;
-  color: #000;
+.card-snippet {
+  font-size: 0.9rem;
+  color: #bfa8e0;
+  line-height: 1.4;
 }
 
-/* MODAL (Efeito Pop-up) */
+.card-footer {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: var(--gir-magenta);
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Modal */
 .modal-overlay {
-  display: none; /* Escondido por padrão */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
-  z-index: 1000;
+  background: rgba(10, 5, 20, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal-content {
-  background-color: #1a102a;
-  padding: 30px;
+  background: var(--card-bg);
+  border: 3px solid var(--zim-green);
   border-radius: 12px;
-  max-width: 500px;
-  width: 100%;
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.5);
   position: relative;
-  box-shadow: 10px 10px 0px #000;
-  animation: popIn 0.3s ease-out;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
 }
 
-/* Bordas personalizadas para cada modal */
-.border-zim { border: 4px solid #00ff66; }
-.border-gir { border: 4px solid #ff007f; }
-.border-dib { border: 4px solid #00d9ff; }
-.border-gaz { border: 4px solid #9d00ff; }
-
-.modal-content h2 {
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.modal-content p {
-  margin-bottom: 12px;
-  line-height: 1.5;
-  color: #d1c2e6;
+.modal-overlay.active .modal-content {
+  transform: scale(1);
 }
 
 .close-btn {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 15px;
-  font-size: 2rem;
-  color: #ff007f;
-  cursor: pointer;
+  background: var(--gir-magenta);
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
   font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 .close-btn:hover {
-  color: #00ff66;
+  background: #ff3399;
 }
 
-/* Animação do Modal */
-@keyframes popIn {
-  0% { transform: scale(0.7); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+.modal-header-tag {
+  color: var(--gir-magenta);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.modal-title {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--zim-green);
+  font-size: 1.6rem;
+  margin: 10px 0 15px 0;
+}
+
+.modal-body p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.modal-solution {
+  background: rgba(57, 255, 20, 0.08);
+  border-left: 4px solid var(--zim-green);
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.modal-solution h4 {
+  color: var(--zim-green);
+  margin-bottom: 5px;
+  font-family: 'Orbitron', sans-serif;
 }

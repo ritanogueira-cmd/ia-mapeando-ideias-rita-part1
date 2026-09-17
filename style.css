@@ -1,240 +1,222 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Orbitron:wght@600;900&family=Roboto:wght@400;700&display=swap');
-
-:root {
-  --bg-dark: #0f0a1c;
-  --card-bg: #1e1333;
-  --border-purple: #8125b2;
-  --zim-green: #39ff14;
-  --gir-magenta: #ff007f;
-  --text-light: #f0e6ff;
-  --shadow-neon: 0 0 15px rgba(57, 255, 20, 0.4);
-}
-
+/* RESET BÁSICO */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  font-family: 'Roboto', sans-serif;
-  padding: 20px;
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(129, 37, 178, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(57, 255, 20, 0.1) 0%, transparent 40%);
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffe6f2 0%, #e1bee7 50%, #e0f7fa 100%);
+    color: #4a2c40;
+    min-height: 100vh;
+    padding-bottom: 40px;
 }
 
-/* Cabeçalho do App */
-header {
-  text-align: center;
-  margin-bottom: 30px;
-  border-bottom: 3px solid var(--gir-magenta);
-  padding-bottom: 20px;
+/* HEADER MAGICO SEGUINDO REGAL ACADEMY */
+.header-magico {
+    background: linear-gradient(90deg, #ff80ab, #ba68c8, #80deea);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 5px solid #ffd700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
 }
 
-header h1 {
-  font-family: 'Orbitron', cursive;
-  font-size: 2.5rem;
-  color: var(--zim-green);
-  text-shadow: 0 0 10px var(--zim-green), 3px 3px 0px var(--gir-magenta);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.header-magico h1 {
+    font-family: 'Fredoka', cursive;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 8px;
 }
 
-header p {
-  font-size: 1rem;
-  color: var(--gir-magenta);
-  margin-top: 8px;
-  font-weight: bold;
+.header-magico p {
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
-.banner-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+/* SEÇÃO PERSONAGENS CHIBI */
+.personagens-section {
+    max-width: 1000px;
+    margin: 25px auto;
+    text-align: center;
+    padding: 0 20px;
 }
 
-.banner-container img {
-  max-width: 450px;
-  width: 100%;
-  border-radius: 12px;
-  border: 3px solid var(--zim-green);
-  box-shadow: var(--shadow-neon);
+.personagens-section h2 {
+    font-family: 'Fredoka', cursive;
+    color: #6a1b9a;
+    margin-bottom: 15px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.personagens-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.section-title {
-  font-family: 'Orbitron', sans-serif;
-  color: var(--zim-green);
-  margin: 30px 0 15px 0;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  border-left: 5px solid var(--gir-magenta);
-  padding-left: 10px;
+.card-personagem {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid #ffd700;
+    border-radius: 20px;
+    padding: 10px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Grid de Cards */
+.card-personagem:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.card-personagem img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #ff80ab;
+    margin-bottom: 8px;
+    background: #fff;
+}
+
+.card-personagem span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #4a148c;
+}
+
+/* CONTAINER PRINCIPAL & CARDS */
+.main-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.main-container h2 {
+    font-family: 'Fredoka', cursive;
+    font-size: 1.8rem;
+    color: #4a148c;
+}
+
+.instrucao {
+    margin-bottom: 25px;
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-/* Estilo dos Cards */
-.card {
-  background: var(--card-bg);
-  border: 2px solid var(--border-purple);
-  border-radius: 8px;
-  padding: 20px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  position: relative;
-  overflow: hidden;
+/* ESTILO DOS CARDS DE TAREFA / INCÔMODOS */
+.card-estudo {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px 20px;
+    border: 3px solid #ffb74d;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6px;
-  height: 100%;
-  background: var(--gir-magenta);
+.card-estudo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(186, 104, 200, 0.3);
+    border-color: #ba68c8;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--zim-green);
-  box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+.card-icone {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-.card-tag {
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: var(--zim-green);
-  letter-spacing: 1px;
-  margin-bottom: 8px;
+.card-estudo h3 {
+    font-family: 'Fredoka', cursive;
+    color: #d81b60;
+    margin-bottom: 10px;
 }
 
-.card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #ffffff;
+.card-estudo p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
 }
 
-.card-snippet {
-  font-size: 0.9rem;
-  color: #bfa8e0;
-  line-height: 1.4;
-}
-
-.card-footer {
-  margin-top: 15px;
-  font-size: 0.8rem;
-  color: var(--gir-magenta);
-  text-align: right;
-  font-weight: bold;
-}
-
-/* Modal */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(10, 5, 20, 0.85);
-  backdrop-filter: blur(5px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-.modal-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
+/* ESTILIZAÇÃO DO MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
-  background: var(--card-bg);
-  border: 3px solid var(--zim-green);
-  border-radius: 12px;
-  width: 90%;
-  max-width: 600px;
-  padding: 30px;
-  box-shadow: 0 0 30px rgba(57, 255, 20, 0.5);
-  position: relative;
-  transform: scale(0.8);
-  transition: transform 0.3s ease;
+    background: #ffffff;
+    border: 4px solid #ffd700;
+    border-radius: 25px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: left;
+    animation: surgimodal 0.3s ease-out;
 }
 
-.modal-overlay.active .modal-content {
-  transform: scale(1);
+@keyframes surgimodal {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: var(--gir-magenta);
-  color: white;
-  border: none;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background 0.2s;
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ad1457;
+    cursor: pointer;
 }
 
-.close-btn:hover {
-  background: #ff3399;
+.modal-header span {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #8e24aa;
+    text-transform: uppercase;
 }
 
-.modal-header-tag {
-  color: var(--gir-magenta);
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-}
-
-.modal-title {
-  font-family: 'Orbitron', sans-serif;
-  color: var(--zim-green);
-  font-size: 1.6rem;
-  margin: 10px 0 15px 0;
+.modal-header h2 {
+    font-family: 'Fredoka', cursive;
+    color: #d81b60;
+    margin-bottom: 15px;
 }
 
 .modal-body p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-light);
-  margin-bottom: 15px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #333;
 }
 
-.modal-solution {
-  background: rgba(57, 255, 20, 0.08);
-  border-left: 4px solid var(--zim-green);
-  padding: 15px;
-  border-radius: 4px;
-  margin-top: 20px;
-}
-
-.modal-solution h4 {
-  color: var(--zim-green);
-  margin-bottom: 5px;
-  font-family: 'Orbitron', sans-serif;
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    color: #6a1b9a;
 }

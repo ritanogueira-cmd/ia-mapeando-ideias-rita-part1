@@ -1,0 +1,278 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de estudos da Rita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sparkles sparkle-1">✦</div>
+    <div class="sparkles sparkle-2">✧</div>
+    <div class="sparkles sparkle-3">⋆</div>
+    <div class="sparkles sparkle-4">✦</div>
+
+    <header class="hero">
+        <div class="butterfly">🦋</div>
+
+        <div class="hero-content">
+            <span class="subtitle">🧚‍♀️ Meu cantinho mágico de estudos</span>
+            <h1>Organizador de estudos da Rita</h1>
+            <p>
+                Transforme sua rotina escolar em uma jornada mais leve,
+                organizada e cheia de magia ✨
+            </p>
+        </div>
+
+        <div class="butterfly butterfly-right">🦋</div>
+    </header>
+
+    <main>
+
+        <section class="welcome-card">
+            <div class="welcome-icon">💖</div>
+
+            <div>
+                <h2>Olá, Rita! ✨</h2>
+                <p>
+                    Aqui estão algumas coisinhas que podem estar deixando
+                    seus estudos mais difíceis. Vamos resolver uma por uma?
+                </p>
+            </div>
+
+            <div class="fairy-wing">🪽</div>
+        </section>
+
+        <section class="section-title">
+            <span>✧</span>
+            <h2>Minha rotina</h2>
+            <span>✧</span>
+        </section>
+
+        <section class="cards-container">
+
+            <article class="study-card pink" onclick="openModal(
+                'Acúmulo de tarefas',
+                'Você percebe que várias atividades acabam se acumulando até o último momento. Uma solução é dividir tarefas grandes em pequenos passos e definir prioridades para cada dia.',
+                '📚'
+            )">
+                <div class="card-top">
+                    <span class="card-icon">📚</span>
+                    <span class="card-tag">Organização</span>
+                </div>
+
+                <h3>Tenho muitas tarefas acumuladas</h3>
+                <p>
+                    Trabalhos, exercícios e provas acabam aparecendo
+                    todos ao mesmo tempo.
+                </p>
+
+                <button>Ver solução ✨</button>
+            </article>
+
+            <article class="study-card purple" onclick="openModal(
+                'Esquecer compromissos',
+                'Datas de provas e trabalhos podem ser difíceis de acompanhar. Anotar cada compromisso e visualizar a semana inteira ajuda a evitar surpresas.',
+                '🗓️'
+            )">
+                <div class="card-top">
+                    <span class="card-icon">🗓️</span>
+                    <span class="card-tag">Planejamento</span>
+                </div>
+
+                <h3>Acabo esquecendo datas importantes</h3>
+                <p>
+                    Às vezes lembro de uma prova ou trabalho
+                    somente quando está muito perto.
+                </p>
+
+                <button>Ver solução ✨</button>
+            </article>
+
+            <article class="study-card blue" onclick="openModal(
+                'Falta de concentração',
+                'Quando existem muitas distrações, começar uma tarefa pode parecer difícil. Separar um período curto para estudar e fazer pequenas pausas pode ajudar.',
+                '🌙'
+            )">
+                <div class="card-top">
+                    <span class="card-icon">🌙</span>
+                    <span class="card-tag">Foco</span>
+                </div>
+
+                <h3>Tenho dificuldade para me concentrar</h3>
+                <p>
+                    Celular, notificações e outras coisas acabam
+                    tirando minha atenção dos estudos.
+                </p>
+
+                <button>Ver solução ✨</button>
+            </article>
+
+            <article class="study-card lavender" onclick="openModal(
+                'Rotina cansativa',
+                'Uma rotina cheia de compromissos pode fazer os estudos parecerem ainda mais pesados. Organizar momentos de estudo e descanso ajuda a tornar o dia mais equilibrado.',
+                '☁️'
+            )">
+                <div class="card-top">
+                    <span class="card-icon">☁️</span>
+                    <span class="card-tag">Bem-estar</span>
+                </div>
+
+                <h3>Minha rotina fica muito cansativa</h3>
+                <p>
+                    Tenho várias coisas para fazer e sinto que
+                    quase não sobra tempo para descansar.
+                </p>
+
+                <button>Ver solução ✨</button>
+            </article>
+
+            <article class="study-card gold" onclick="openModal(
+                'Falta de motivação',
+                'Nem sempre é fácil encontrar vontade para começar. Transformar uma tarefa grande em pequenos objetivos pode fazer o início parecer mais simples.',
+                '⭐'
+            )">
+                <div class="card-top">
+                    <span class="card-icon">⭐</span>
+                    <span class="card-tag">Motivação</span>
+                </div>
+
+                <h3>Às vezes não tenho motivação</h3>
+                <p>
+                    Sei que preciso estudar, mas tenho dificuldade
+                    para começar ou continuar.
+                </p>
+
+                <button>Ver solução ✨</button>
+            </article>
+
+            <article class="study-card pink" onclick="openModal(
+                'Procrastinação',
+                'Deixar tudo para depois pode aumentar a pressão perto das entregas. Começar com apenas alguns minutos já pode ajudar a vencer a barreira inicial.',
+                '💗'
+            )">
+                <div class="card-top">
+                    <span class="card-icon">💗</span>
+                    <span class="card-tag">Hábitos</span>
+                </div>
+
+                <h3>Deixo as coisas para depois</h3>
+                <p>
+                    Muitas vezes penso que vou fazer depois
+                    e termino tentando resolver tudo de uma vez.
+                </p>
+
+                <button>Ver solução ✨</button>
+            </article>
+
+        </section>
+
+        <section class="today-card">
+            <div class="today-header">
+                <div>
+                    <span class="mini-label">✨ PLANO DE HOJE</span>
+                    <h2>Pequenos passos, grandes conquistas!</h2>
+                </div>
+
+                <span class="crown">👑</span>
+            </div>
+
+            <div class="progress-area">
+                <div class="progress-info">
+                    <span>Progresso do dia</span>
+                    <strong>2 de 4 tarefas</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="tasks">
+                <label class="task completed">
+                    <input type="checkbox" checked>
+                    <span class="checkmark">✓</span>
+                    <span>Revisar conteúdo da aula</span>
+                </label>
+
+                <label class="task completed">
+                    <input type="checkbox" checked>
+                    <span class="checkmark">✓</span>
+                    <span>Organizar materiais</span>
+                </label>
+
+                <label class="task">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span>Fazer exercícios de matemática</span>
+                </label>
+
+                <label class="task">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span>Preparar atividade de amanhã</span>
+                </label>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>🦋</span>
+        Feito para tornar os estudos um pouquinho mais mágicos
+        <span>✨</span>
+    </footer>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+
+            <button class="close-modal" onclick="closeModal()">×</button>
+
+            <div class="modal-icon" id="modalIcon">📚</div>
+
+            <span class="modal-label">✨ DICA MÁGICA</span>
+
+            <h2 id="modalTitle">Título</h2>
+
+            <p id="modalDescription">
+                Descrição da solução.
+            </p>
+
+            <button class="modal-action" onclick="closeModal()">
+                Entendi! 💖
+            </button>
+
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, description, icon) {
+            document.getElementById("modalTitle").textContent = title;
+            document.getElementById("modalDescription").textContent = description;
+            document.getElementById("modalIcon").textContent = icon;
+
+            document.getElementById("modalOverlay").classList.add("active");
+            document.body.classList.add("modal-open");
+        }
+
+        function closeModal(event) {
+            if (event && event.target !== document.getElementById("modalOverlay")) {
+                return;
+            }
+
+            document.getElementById("modalOverlay").classList.remove("active");
+            document.body.classList.remove("modal-open");
+        }
+
+        document.querySelectorAll(".task input").forEach(input => {
+            input.addEventListener("change", function () {
+                this.parentElement.classList.toggle("completed", this.checked);
+            });
+        });
+    </script>
+
+</body>
+</html>

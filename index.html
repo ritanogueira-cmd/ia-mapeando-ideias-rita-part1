@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de estudos da Rita - Regal Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="sparkles-bg"></div>
+
+    <!-- Guia Visual Esquerdo: Rose Cinderella & Hawk Snow White -->
+    <aside class="chibi-guide left-guide">
+        <div class="chibi-card">
+            <svg class="chibi-avatar" viewBox="0 0 100 100">
+                <!-- Rose Cinderella Chibi -->
+                <circle cx="50" cy="50" r="45" fill="#ffd1dc"/>
+                <!-- Cabelo Loiro -->
+                <path d="M 20 40 Q 50 10 80 40 Q 85 70 75 85 Q 50 95 25 85 Z" fill="#fff176"/>
+                <!-- Rosto -->
+                <circle cx="50" cy="52" r="28" fill="#ffe0bd"/>
+                <!-- Olhos Azuis Grandes -->
+                <ellipse cx="40" cy="50" rx="6" ry="8" fill="#29b6f6"/>
+                <ellipse cx="60" cy="50" rx="6" ry="8" fill="#29b6f6"/>
+                <circle cx="41" cy="48" r="2" fill="#fff"/>
+                <circle cx="61" cy="48" r="2" fill="#fff"/>
+                <!-- Sorriso -->
+                <path d="M 45 62 Q 50 67 55 62" stroke="#e91e63" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <!-- Bochechas Coradas -->
+                <circle cx="34" cy="56" r="4" fill="#ff80ab" opacity="0.6"/>
+                <circle cx="66" cy="56" r="4" fill="#ff80ab" opacity="0.6"/>
+                <!-- Tiara de Cristal/Sapatinho -->
+                <path d="M 38 28 L 50 18 L 62 28 L 50 24 Z" fill="#e0f7fa" stroke="#4dd0e1" stroke-width="1.5"/>
+            </svg>
+            <span class="chibi-name">Rose Cinderella</span>
+            <p class="chibi-quote">"Com os sapatos certos e foco, nada é impossível!"</p>
+        </div>
+
+        <div class="chibi-card">
+            <svg class="chibi-avatar" viewBox="0 0 100 100">
+                <!-- Hawk Snow White Chibi -->
+                <circle cx="50" cy="50" r="45" fill="#bbdefb"/>
+                <!-- Cabelo Azul -->
+                <path d="M 18 45 Q 50 5 82 45 Q 80 80 70 85 Q 50 90 30 85 Z" fill="#1e88e5"/>
+                <!-- Rosto -->
+                <circle cx="50" cy="52" r="27" fill="#ffe0bd"/>
+                <!-- Olhos Castanhos -->
+                <ellipse cx="40" cy="50" rx="5" ry="7" fill="#6D4C41"/>
+                <ellipse cx="60" cy="50" rx="5" ry="7" fill="#6D4C41"/>
+                <circle cx="41" cy="48" r="2" fill="#fff"/>
+                <circle cx="61" cy="48" r="2" fill="#fff"/>
+                <!-- Sorriso Heróico -->
+                <path d="M 44 62 Q 50 66 56 62" stroke="#d81b60" stroke-width="2" fill="none"/>
+                <!-- Maçã Encantada na Cabeça -->
+                <circle cx="50" cy="20" r="7" fill="#e53935"/>
+                <path d="M 50 13 Q 53 10 52 8" stroke="#43a047" stroke-width="1.5" fill="none"/>
+            </svg>
+            <span class="chibi-name">Hawk Snow White</span>
+            <p class="chibi-quote">"Um herói nunca deixa os estudos para depois!"</p>
+        </div>
+    </aside>
+
+    <div class="container">
+        <!-- Cabeçalho em Formato de Pergaminho Real -->
+        <header class="royal-banner">
+            <div class="banner-scroll">
+                <div class="crown-icon">👑</div>
+                <h1>Organizador de estudos da Rita</h1>
+                <p class="subtitle">✨ Conquiste o seu ano letivo com a magia de Regal Academy! ✨</p>
+                <div class="gem-decor Left-gem">💎</div>
+                <div class="gem-decor right-gem">💎</div>
+            </div>
+        </header>
+
+        <!-- Grade de Problemas da Rotina de Estudos -->
+        <main class="study-grid">
+            
+            <!-- Card 1: Procrastinação -->
+            <article class="study-card card-pink">
+                <div class="card-badge">⏳ Desafio 01</div>
+                <div class="card-icon">🐉</div>
+                <h2>Procrastinação e Prazos Acumulado</h2>
+                <p>Deixar tudo para a última hora acumulando tarefas como um dragão de deveres?</p>
+                <a href="#modal-procrastinacao" class="magic-btn">
+                    <span class="btn-sparkle">✨</span> Ver Solução Mágica 🔮
+                </a>
+            </article>
+
+            <!-- Card 2: Esquecimento de Datas -->
+            <article class="study-card card-purple">
+                <div class="card-badge">📅 Desafio 02</div>
+                <div class="card-icon">📜</div>
+                <h2>Esquecimento de Datas de Provas</h2>
+                <p>Ser pego de surpresa por testes e trabalhos sem ter revisado nada?</p>
+                <a href="#modal-esquecimento" class="magic-btn">
+                    <span class="btn-sparkle">✨</span> Ver Solução Mágica 🔮
+                </a>
+            </article>
+
+            <!-- Card 3: Falta de Foco -->
+            <article class="study-card card-blue">
+                <div class="card-badge">🔮 Desafio 03</div>
+                <div class="card-icon">📱</div>
+                <h2>Falta de Foco & Distrações</h2>
+                <p>Perder a atenção a cada notificação no celular enquanto tenta concentrar?</p>
+                <a href="#modal-foco" class="magic-btn">
+                    <span class="btn-sparkle">✨</span> Ver Solução Mágica 🔮
+                </a>
+            </article>
+
+            <!-- Card 4: Cansaço e Falta de Cronograma -->
+            <article class="study-card card-mint">
+                <div class="card-badge">🐸 Desafio 04</div>
+                <div class="card-icon">💤</div>
+                <h2>Cansaço & Desorganização</h2>
+                <p>Estudar sem pausa até a exaustão por falta de um cronograma claro e equilibrado?</p>
+                <a href="#modal-cansaco" class="magic-btn">
+                    <span class="btn-sparkle">✨</span> Ver Solução Mágica 🔮
+                </a>
+            </article>
+
+        </main>
+    </div>
+
+    <!-- Guia Visual Direito: Astoria, Joy & Travis -->
+    <aside class="chibi-guide right-guide">
+        <div class="chibi-card">
+            <svg class="chibi-avatar" viewBox="0 0 100 100">
+                <!-- Astoria Rapunzel Chibi -->
+                <circle cx="50" cy="50" r="45" fill="#f3e5f5"/>
+                <!-- Cabelo Magenta Longo -->
+                <path d="M 15 35 C 10 70, 20 95, 30 98 C 40 95, 60 95, 70 98 C 80 95, 90 70, 85 35 Z" fill="#d81b60"/>
+                <!-- Rosto -->
+                <circle cx="50" cy="48" r="26" fill="#ffe0bd"/>
+                <!-- Óculos e Olhos -->
+                <rect x="30" y="40" width="16" height="12" rx="3" fill="none" stroke="#8e24aa" stroke-width="2"/>
+                <rect x="54" y="40" width="16" height="12" rx="3" fill="none" stroke="#8e24aa" stroke-width="2"/>
+                <line x1="46" y1="46" x2="54" y2="46" stroke="#8e24aa" stroke-width="2"/>
+                <circle cx="38" cy="46" r="3" fill="#43a047"/>
+                <circle cx="62" cy="46" r="3" fill="#43a047"/>
+                <!-- Sorriso Sábio -->
+                <path d="M 45 60 Q 50 64 55 60" stroke="#d81b60" stroke-width="2" fill="none"/>
+            </svg>
+            <span class="chibi-name">Astoria Rapunzel</span>
+            <p class="chibi-quote">"Notas 10 exigem organização impecável!"</p>
+        </div>
+
+        <div class="chibi-card">
+            <svg class="chibi-avatar" viewBox="0 0 100 100">
+                <!-- Joy LeFrog Chibi -->
+                <circle cx="50" cy="50" r="45" fill="#e8f5e9"/>
+                <!-- Cabelo Verde Curto -->
+                <path d="M 22 42 Q 50 12 78 42 Q 80 75 70 82 Q 50 88 30 82 Z" fill="#43a047"/>
+                <!-- Rosto -->
+                <circle cx="50" cy="50" r="26" fill="#ffe0bd"/>
+                <!-- Olhos Castanhos Vivos -->
+                <circle cx="40" cy="48" r="5" fill="#4e342e"/>
+                <circle cx="60" cy="48" r="5" fill="#4e342e"/>
+                <!-- Tiara de Sapinho -->
+                <circle cx="38" cy="22" r="6" fill="#76ff03"/>
+                <circle cx="62" cy="22" r="6" fill="#76ff03"/>
+                <circle cx="38" cy="22" r="2" fill="#000"/>
+                <circle cx="62" cy="22" r="2" fill="#000"/>
+                <!-- Sorriso Sapeca -->
+                <path d="M 43 60 Q 50 68 57 60" fill="#e91e63"/>
+            </svg>
+            <span class="chibi-name">Joy LeFrog</span>
+            <p class="chibi-quote">"Insetos no estudo? Não, só ideias saltitantes!"</p>
+        </div>
+
+        <div class="chibi-card">
+            <svg class="chibi-avatar" viewBox="0 0 100 100">
+                <!-- Travis Beast Chibi -->
+                <circle cx="50" cy="50" r="45" fill="#fff3e0"/>
+                <!-- Cabelo Castanho Desajeitado -->
+                <path d="M 20 40 L 35 15 L 50 25 L 65 15 L 80 40 Q 82 75 50 85 Z" fill="#8d6e63"/>
+                <!-- Rosto -->
+                <circle cx="50" cy="52" r="26" fill="#ffe0bd"/>
+                <!-- Olhos Castanhos Expressivos -->
+                <ellipse cx="40" cy="50" rx="5" ry="7" fill="#3e2723"/>
+                <ellipse cx="60" cy="50" rx="5" ry="7" fill="#3e2723"/>
+                <!-- Sorriso Artístico -->
+                <path d="M 44 63 Q 50 67 56 63" stroke="#d81b60" stroke-width="2" fill="none"/>
+                <!-- Pincel / Arte -->
+                <path d="M 72 30 L 85 15" stroke="#ffb74d" stroke-width="3"/>
+                <circle cx="86" cy="14" r="3" fill="#e91e63"/>
+            </svg>
+            <span class="chibi-name">Travis Beast</span>
+            <p class="chibi-quote">"Crie esquemas artísticos para memorizar tudo!"</p>
+        </div>
+    </aside>
+
+    <!-- MODAIS DE SOLUÇÃO MÁGICA -->
+
+    <!-- Modal 1: Procrastinação -->
+    <div id="modal-procrastinacao" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="close-btn" title="Fechar">⭐</a>
+            <div class="modal-header">
+                <span class="modal-icon">🐉</span>
+                <h2>Vencendo a Procrastinação</h2>
+            </div>
+            <div class="modal-body">
+                <h3>O Problema:</h3>
+                <p>Acumular tarefas gera ansiedade e transforma pequenas leituras em verdadeiros dragões gigantescos no final do bimestre.</p>
+                
+                <div class="magic-tip-box">
+                    <div class="tip-title">✨ Dica Mágica de Solução (Método Pomodoro Encantado) ✨</div>
+                    <p>Divida seus estudos em poções de tempo! Estude firme por <strong>25 minutos</strong> sem distrações e recompense-se com <strong>5 minutos de pausa livre</strong>. A cada 4 ciclos, faça uma pausa maior de 15 minutos com um lanche real!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Esquecimento -->
+    <div id="modal-esquecimento" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="close-btn" title="Fechar">⭐</a>
+            <div class="modal-header">
+                <span class="modal-icon">📜</span>
+                <h2>Controle Total de Datas</h2>
+            </div>
+            <div class="modal-body">
+                <h3>O Problema:</h3>
+                <p>Confiar apenas na memória costuma falhar nos momentos mais decisivos, levando ao pânico da véspera de prova.</p>
+                
+                <div class="magic-tip-box">
+                    <div class="tip-title">✨ Dica Mágica de Solução (Pergaminho dos Prazos de Astoria) ✨</div>
+                    <p>Crie um <strong>Mural de Prazos Visível</strong> usando código de cores: <span style="color:#d81b60; font-weight:bold;">Vermelho</span> para provas em menos de 3 dias, <span style="color:#f57c00; font-weight:bold;">Laranja</span> para uma semana e <span style="color:#388e3c; font-weight:bold;">Verde</span> para entregas futuras. Atualize-o no início de cada semana!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Foco -->
+    <div id="modal-foco" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="close-btn" title="Fechar">⭐</a>
+            <div class="modal-header">
+                <span class="modal-icon">🔮</span>
+                <h2>Blindagem Antidistração</h2>
+            </div>
+            <div class="modal-body">
+                <h3>O Problema:</h3>
+                <p>Redes sociais e notificações fragmentam seu raciocínio, fazendo 30 minutos de estudo renderem menos do que 5 minutos de dedicação total.</p>
+                
+                <div class="magic-tip-box">
+                    <div class="tip-title">✨ Dica Mágica de Solução (Escudo de Proteção do Hawk) ✨</div>
+                    <p>Ative o modo <strong>"Não Perturbe"</strong> no seu celular ou use bloqueadores de sites durante o momento de estudo. Deixe o aparelho em outro cômodo. Mantenha na sua mesa apenas o material da matéria do momento!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Cansaço -->
+    <div id="modal-cansaco" class="modal-overlay">
+        <div class="modal-card">
+            <a href="#" class="close-btn" title="Fechar">⭐</a>
+            <div class="modal-header">
+                <span class="modal-icon">🐸</span>
+                <h2>Cronograma Energizante</h2>
+            </div>
+            <div class="modal-body">
+                <h3>O Problema:</h3>
+                <p>Estudar por horas a fio sem planejamento causa estresse, esgotamento mental e perda da capacidade de retenção de conteúdo.</p>
+                
+                <div class="magic-tip-box">
+                    <div class="tip-title">✨ Dica Mágica de Solução (Ritmo Mágico de Joy) ✨</div>
+                    <p>Crie uma rotina com horários fixos para estudo e descanso. Intercale disciplinas teóricas com exatas para exercitar diferentes partes do cérebro. Nunca pule horas de sono: é dormindo que a magia da memória se consolida!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

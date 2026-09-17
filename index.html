@@ -1,114 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Organizador de estudos da Rita</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de estudos da Rita</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte divertida e mágica do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="container">
-    <header>
-      <h1>Organizador de estudos da Rita</h1>
-      <p>SISTEMA IRKEN DE ORGANIZAÇÃO CONTRA A PROCRASTINAÇÃO DA TERRA</p>
+    <!-- Cabeçalho Mágico -->
+    <header class="header-magico">
+        <div class="brilho-decorativo">✨</div>
+        <h1>🏰 Organizador de Estudos da Rita ✨</h1>
+        <p>Bem-vindo à Regal Academy! Organize sua rotina de estudos com um toque de magia!</p>
     </header>
 
-    <!-- Banner Zim & Gir -->
-    <div class="banner-container">
-      <img src="watermarked_img_12610501427447471305.jpg" alt="Invasor Zim e Gir">
-    </div>
-
-    <!-- Seção 1: Problemas Reais na Organização -->
-    <h2 class="section-title">👾 Problemas Reais de Organização</h2>
-    <div class="cards-grid">
-
-      <div class="card" onclick="openModal('Falta de Cronograma Definido', 'Problema Real', 'Estudantes acumulam tarefas por não saberem exatamente quanto tempo leva cada atividade ou quando estudá-la.', 'A Estratégia Irken: Dividir prazos longos em pequenos blocos diários de 25 minutos. Não tente conquistar tudo em um só dia!')">
-        <div class="card-tag">Problema Real</div>
-        <div class="card-title">Acúmulo por Falta de Prazos</div>
-        <div class="card-snippet">Não saber o tempo certo de cada tarefa faz tudo acumular para a véspera.</div>
-        <div class="card-footer">Clique para analisar →</div>
-      </div>
-
-      <div class="card" onclick="openModal('Técnicas Ineficientes de Estudo', 'Problema Real', 'Ler o mesmo livro texto por horas sem retenção real de conteúdo ou resumos passivos que desperdiçam tempo.', 'A Estratégia Irken: Troque a leitura passiva por resolução de questões e flashes de revisão ativa (Flashcards).')">
-        <div class="card-tag">Problema Real</div>
-        <div class="card-title">Estudo Passivo Ineficiente</div>
-        <div class="card-snippet">Gastar horas lendo textos sem realmente absorver ou fixar o conteúdo.</div>
-        <div class="card-footer">Clique para analisar →</div>
-      </div>
-
-      <div class="card" onclick="openModal('Falta de Priorização', 'Problema Real', 'Tentar fazer todas as matérias ao mesmo tempo e acabar não concluindo as mais urgentes ou difíceis.', 'A Estratégia Irken: Matriz de Eisenhower — Separe tarefas entre Urgente vs Importante antes de começar o dia.')">
-        <div class="card-tag">Problema Real</div>
-        <div class="card-title">Sobrecarga de Matérias</div>
-        <div class="card-snippet">Tentar abraçar todo o conteúdo de uma vez e travar no processo.</div>
-        <div class="card-footer">Clique para analisar →</div>
-      </div>
-
-    </div>
-
-    <!-- Seção 2: Incômodos e Insatisfações do Dia a Dia -->
-    <h2 class="section-title">🛸 Incômodos & Insatisfações Diárias</h2>
-    <div class="cards-grid">
-
-      <div class="card" onclick="openModal('Distrações e Notificações (GIR Distractions)', 'Incômodo Diário', 'O celular e redes sociais interrompem o foco a cada 10 minutos, causando o efeito de atenção fragmentada.', 'A Estratégia Irken: Ative o Modo de Isolamento Tecnológico. Deixe o celular em outro cômodo durante os blocos de estudo primários.')">
-        <div class="card-tag">Incômodo Diário</div>
-        <div class="card-title">Vício em Telas e Notificações</div>
-        <div class="card-snippet">O impulso constante de olhar redes sociais corta o estado de fluxo de estudo.</div>
-        <div class="card-footer">Clique para analisar →</div>
-      </div>
-
-      <div class="card" onclick="openModal('Cansaço Mental e Esgotamento', 'Incômodo Diário', 'Estudar até tarde da noite resulta em esgotamento e baixa retenção de conhecimento no dia seguinte.', 'A Estratégia Irken: Respeite os ciclos de descanso e sono. O cérebro humano precisa consolidar memórias enquanto dorme!')">
-        <div class="card-tag">Incômodo Diário</div>
-        <div class="card-title">Exaustão Mental / Burnout</div>
-        <div class="card-snippet">Estudar sob extremo cansaço gera a falsa sensação de produtividade.</div>
-        <div class="card-footer">Clique para analisar →</div>
-      </div>
-
-      <div class="card" onclick="openModal('Sentimento de Insatisfação / Procrastinação', 'Incômodo Diário', 'Sensação de culpa constante por sentir que deveria estar estudando, mesmo nas horas livres.', 'A Estratégia Irken: Defina um horário claro de início e FIM dos estudos para poder descansar sem sentimento de culpa.')">
-        <div class="card-tag">Incômodo Diário</div>
-        <div class="card-title">Culpa Improdutiva Constante</div>
-        <div class="card-snippet">A incapacidade de se desligar dos estudos gera ansiedade e frustração.</div>
-        <div class="card-footer">Clique para analisar →</div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Modal Component -->
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-content">
-      <button class="close-btn" onclick="closeModal()">✕</button>
-      <span class="modal-header-tag" id="modalTag">CATEGORIA</span>
-      <h3 class="modal-title" id="modalTitle">Título do Card</h3>
-      <div class="modal-body">
-        <p id="modalDesc">Descrição detalhada do problema analisado pelo sistema.</p>
-        <div class="modal-solution">
-          <h4>⚡ Solução do Sistema ZIM:</h4>
-          <p id="modalSolutionText">Estratégia para combater este incômodo.</p>
+    <!-- Seção de Personagens em Chibi / Estilo Série -->
+    <section class="personagens-section">
+        <h2>✨ Turma da Regal Academy ✨</h2>
+        <div class="personagens-container">
+            <div class="card-personagem">
+                <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=RoseCinderella&backgroundColor=ffb7d5" alt="Rose Cinderella">
+                <span>Rose Cinderella</span>
+            </div>
+            <div class="card-personagem">
+                <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=HawkSnowWhite&backgroundColor=b3e5fc" alt="Hawk SnowWhite">
+                <span>Hawk SnowWhite</span>
+            </div>
+            <div class="card-personagem">
+                <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=AstoriaRapunzel&backgroundColor=d1c4e9" alt="Astoria Rapunzel">
+                <span>Astoria Rapunzel</span>
+            </div>
+            <div class="card-personagem">
+                <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=JoyLeFrog&backgroundColor=c8e6c9" alt="Joy LeFrog">
+                <span>Joy LeFrog</span>
+            </div>
+            <div class="card-personagem">
+                <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=TravisBeast&backgroundColor=ffe0b2" alt="Travis Beast">
+                <span>Travis Beast</span>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <script>
-    function openModal(title, tag, description, solution) {
-      document.getElementById('modalTitle').innerText = title;
-      document.getElementById('modalTag').innerText = tag;
-      document.getElementById('modalDesc').innerText = description;
-      document.getElementById('modalSolutionText').innerText = solution;
+    <!-- Conteúdo Principal / Cards de Desafios da Rotina -->
+    <main class="main-container">
+        <h2>📜 Desafios & Incômodos da Rotina de Estudos</h2>
+        <p class="instrucao">Clique nos cards para abrir o grimório de soluções mágicas (Modal)!</p>
 
-      document.getElementById('modalOverlay').classList.add('active');
-    }
+        <div class="cards-grid">
+            
+            <!-- Card 1 -->
+            <div class="card-estudo" onclick="abrirModal('modal1')">
+                <div class="card-icone">⏰</div>
+                <h3>Procrastinação Mágica</h3>
+                <p>Acabar deixando tudo para a última hora e virar a noite estudando.</p>
 
-    function closeModal() {
-      document.getElementById('modalOverlay').classList.remove('active');
-    }
+                <div class="modal" id="modal1">
+                    <div class="modal-content" onclick="event.stopPropagation()">
+                        <span class="fechar" onclick="fecharModal('modal1')">&times;</span>
+                        <div class="modal-header">
+                            <span>👑 Dica da Astoria Rapunzel</span>
+                            <h2>Procrastinação Mágica</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>O Incômodo:</strong> Adiar as tarefas acumulando trabalhos grandes e sentindo ansiedade perto das provas.</p>
+                            <p><strong>Solução Encantada:</strong> Use a técnica Pomodoro! Estude por 25 minutos com foco total e descanse 5 minutos. Divida trabalhos grandes em etapas minúsculas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    document.getElementById('modalOverlay').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeModal();
-      }
-    });
-  </script>
+            <!-- Card 2 -->
+            <div class="card-estudo" onclick="abrirModal('modal2')">
+                <div class="card-icone">📱</div>
+                <h3>Feitiço da Distração</h3>
+                <p>Notificações, redes sociais e celular tirando o foco do livro.</p>
+
+                <div class="modal" id="modal2">
+                    <div class="modal-content" onclick="event.stopPropagation()">
+                        <span class="fechar" onclick="fecharModal('modal2')">&times;</span>
+                        <div class="modal-header">
+                            <span>👑 Dica do Hawk SnowWhite</span>
+                            <h2>Feitiço da Distração</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>O Incômodo:</strong> Abrir o celular para checar uma mensagem e perder 1 hora em redes sociais.</p>
+                            <p><strong>Solução Encantada:</strong> Deixe o celular em outro cômodo durante o bloco de estudos ou use aplicativos de bloqueio de distrações.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card-estudo" onclick="abrirModal('modal3')">
+                <div class="card-icone">📚</div>
+                <h3>Desorganização do Material</h3>
+                <p>Anotações espalhadas, arquivos perdidos e prazos esquecidos.</p>
+
+                <div class="modal" id="modal3">
+                    <div class="modal-content" onclick="event.stopPropagation()">
+                        <span class="fechar" onclick="fecharModal('modal3')">&times;</span>
+                        <div class="modal-header">
+                            <span>👑 Dica da Rose Cinderella</span>
+                            <h2>Desorganização de Material</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>O Incômodo:</strong> Perder tempo procurando cadernos, links de aula ou resumos que sumiram.</p>
+                            <p><strong>Solução Encantada:</strong> Crie pastas coloridas separadas por matéria no seu computador/drive e mantenha uma agenda de prazos visível.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card-estudo" onclick="abrirModal('modal4')">
+                <div class="card-icone">😴</div>
+                <h3>Cansaço e Falta de Energia</h3>
+                <p>Estudar com sono e não conseguir memorizar o conteúdo lido.</p>
+
+                <div class="modal" id="modal4">
+                    <div class="modal-content" onclick="event.stopPropagation()">
+                        <span class="fechar" onclick="fecharModal('modal4')">&times;</span>
+                        <div class="modal-header">
+                            <span>👑 Dica da Joy LeFrog</span>
+                            <h2>Cansaço e Sono nas Aulas</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>O Incômodo:</strong> Estudar até tarde e no dia seguinte não ter foco, acumulando cansaço mental.</p>
+                            <p><strong>Solução Encantada:</strong> Durma pelo menos 8 horas por noite. Uma mente descansada aprende duas vezes mais rápido!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card-estudo" onclick="abrirModal('modal5')">
+                <div class="card-icone">🎨</div>
+                <h3>Sobrecarga e Ansiedade</h3>
+                <p>Sentir que são matérias demais e não saber por onde começar.</p>
+
+                <div class="modal" id="modal5">
+                    <div class="modal-content" onclick="event.stopPropagation()">
+                        <span class="fechar" onclick="fecharModal('modal5')">&times;</span>
+                        <div class="modal-header">
+                            <span>👑 Dica do Travis Beast</span>
+                            <h2>Sobrecarga de Matérias</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>O Incômodo:</strong> Sensação de bloqueio por ter muitas coisas para estudar ao mesmo tempo.</p>
+                            <p><strong>Solução Encantada:</strong> Monte um cronograma diário fixo, priorizando apenas 2 disciplinas principais por dia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>🏰 Prototype - Organizador de Estudos da Rita | Inspirado em Regal Academy ✨</p>
+    </footer>
+
+    <!-- Script Simples apenas para ativar a abertura/fechamento do Modal no CSS sem alterar o foco HTML/CSS -->
+    <script>
+        function abrirModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function fecharModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
 </body>
 </html>

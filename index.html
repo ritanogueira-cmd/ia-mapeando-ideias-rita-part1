@@ -3,145 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Organizador de estudos da Rita</title>
-
-  <!-- Fontes do Google (Fredoka e Nunito) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Estilos CSS Separados -->
+  <title>ZIM-STUDY: Protocolo de Organização Alienígena</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- CABEÇALHO -->
+  <!-- CABEÇALHO DA APLICAÇÃO -->
   <header>
-    <div class="banner-stripes"></div>
-    <h1>Organizador de estudos da Rita ✏️</h1>
-    <p class="subtitle">Mapeamento de incômodos e desafios da rotina de estudos</p>
+    <h1>PROTO-ZIM // ESTUDOS</h1>
+    <p>Mapeamento de Obstáculos da Rotina de Estudo Humana</p>
   </header>
 
-  <!-- CONTAINER DE CARDS DE PROBLEMAS REAIS -->
-  <main class="container">
-    <div class="cards-grid">
+  <!-- GRID DE CARDS -->
+  <main class="cards-grid">
 
-      <!-- CARD 1: ROSA -->
-      <div class="card rosa" onclick="openModal('Procrastinação no Celular', 'Sensação constante de perder tempo nas redes sociais quando deveria estar focado nos livros.', 'O excesso de notificações e o hábito de checar o celular criam um ciclo de ansiedade e culpa, adiando o início das tarefas importantes.', 'Experimente a técnica Pomodoro (25 min de foco + 5 min de descanso) e use bloqueadores de aplicativos no celular durante o bloco de estudos.')">
-        <div class="card-header">
-          <span class="tag">Foco & Atenção</span>
-          <span class="icon">📱</span>
-        </div>
-        <h3>Procrastinação no Celular</h3>
-        <p>Sensação constante de perder tempo nas redes sociais quando deveria estar estudando...</p>
-        <button class="btn-detalhes">Ver detalhes ✦</button>
+    <!-- CARD 1 -->
+    <article class="card">
+      <div>
+        <span class="card-tag">Problema #01</span>
+        <h2>Procrastinação & Distrações Digitais</h2>
+        <p>Incapacidade de focar na tarefa atual devido às tentações do mundo virtual e redes sociais.</p>
       </div>
+      <label for="modal-1" class="btn-open">Analisar Ameaça</label>
+    </article>
 
-      <!-- CARD 2: AZUL -->
-      <div class="card azul" onclick="openModal('Acúmulo de Matérias', 'Não saber por onde começar a estudar devido à enorme quantidade de matérias acumuladas.', 'A falta de priorização gera paralisia por análise: o estudante passa mais tempo preocupado com o volume do que executando as tarefas.', 'Divida as grandes matérias em pequenas tarefas diárias (micro-passos). Comece sempre pela tarefa mais simples para criar impulso.')">
-        <div class="card-header">
-          <span class="tag">Planejamento</span>
-          <span class="icon">📚</span>
-        </div>
-        <h3>Acúmulo de Matérias</h3>
-        <p>Paralisia e ansiedade por ter muito conteúdo pendente sem saber por onde começar...</p>
-        <button class="btn-detalhes">Ver detalhes ✦</button>
+    <!-- CARD 2 -->
+    <article class="card">
+      <div>
+        <span class="card-tag">Problema #02</span>
+        <h2>Sobrecarga de Conteúdo</h2>
+        <p>Falta de clareza sobre o que estudar primeiro, levando ao acúmulo de matérias e pânico.</p>
       </div>
+      <label for="modal-2" class="btn-open">Analisar Ameaça</label>
+    </article>
 
-      <!-- CARD 3: VERDE -->
-      <div class="card verde" onclick="openModal('Mesa Bagunçada & Barulho', 'Mesa bagunçada, materiais sumidos e ambiente barulhento atrapalhando a concentração.', 'Perder tempo procurando canetas, anotações ou lidando com distrações visuais reduz drasticamente a energia mental antes mesmo do estudo começar.', 'Reserve 5 minutos no final do dia para organizar a mesa e separar o material das matérias que serão estudadas no dia seguinte.')">
-        <div class="card-header">
-          <span class="tag">Ambiente</span>
-          <span class="icon">🎧</span>
-        </div>
-        <h3>Mesa Bagunçada & Barulho</h3>
-        <p>Perder tempo procurando materiais e distrações visuais no local de estudo...</p>
-        <button class="btn-detalhes">Ver detalhes ✦</button>
+    <!-- CARD 3 -->
+    <article class="card">
+      <div>
+        <span class="card-tag">Problema #03</span>
+        <h2>Ambiente & Cansaço Mental</h2>
+        <p>Falta de rotina, espaço desorganizado e esgotamento físico que impedem a absorção do estudo.</p>
       </div>
+      <label for="modal-3" class="btn-open">Analisar Ameaça</label>
+    </article>
 
-      <!-- CARD 4: AZUL -->
-      <div class="card azul" onclick="openModal('Cansaço e Falta de Energia', 'Exaustão rápida e falta de energia logo nos primeiros minutos de leitura.', 'Estudar sem pausas adequadas ou com noites mal dormidas prejudica a retenção da memória e gera irritabilidade.', 'Garanta noites de sono de 7 a 8 horas e adicione pequenas pausas ativas para se artisticamente alongar e beber água a cada 1 hora de estudo.')">
-        <div class="card-header">
-          <span class="tag">Bem-estar</span>
-          <span class="icon">😴</span>
-        </div>
-        <h3>Cansaço e Falta de Energia</h3>
-        <p>Exhaustão rápida e dificuldade de retenção por conta de noites mal dormidas...</p>
-        <button class="btn-detalhes">Ver detalhes ✦</button>
-      </div>
-
-      <!-- CARD 5: ROSA -->
-      <div class="card rosa" onclick="openModal('Esquecimento Rápido', 'Sensação de ler horas de conteúdo mas não lembrar de nada no dia seguinte.', 'Falta de métodos de revisão espaçada e estudo passivo (apenas ler ou grifar sem testar o próprio conhecimento).', 'Adote o estudo ativo: faça resumos com suas próprias palavras, crie flashcards e explique a matéria para si mesma em voz alta.')">
-        <div class="card-header">
-          <span class="tag">Memória</span>
-          <span class="icon">🧠</span>
-        </div>
-        <h3>Esquecimento Rápido</h3>
-        <p>Estudar por horas mas sentir que não fixou o conteúdo na memória...</p>
-        <button class="btn-detalhes">Ver detalhes ✦</button>
-      </div>
-
-      <!-- CARD 6: VERDE -->
-      <div class="card verde" onclick="openModal('Falta de Rotina Definida', 'Mudança constante nos horários de estudo gerando inconsistência e culpa.', 'Estudar apenas quando sobra tempo faz com que o estudo seja sempre atropelado por outros compromissos do dia.', 'Defina um horário fixo e inegociável na sua agenda diária para os estudos, como se fosse um compromisso externo importante.')">
-        <div class="card-header">
-          <span class="tag">Hábitos</span>
-          <span class="icon">🗓️</span>
-        </div>
-        <h3>Falta de Rotina Definida</h3>
-        <p>Estudar apenas quando sobra tempo, gerando inconsistência nos resultados...</p>
-        <button class="btn-detalhes">Ver detalhes ✦</button>
-      </div>
-
-    </div>
   </main>
 
-  <!-- MODAL POPUP INTERATIVO -->
-  <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOuterClick(event)">
-    <div class="modal">
-      <button class="modal-close" onclick="closeModal()">&times;</button>
-      <h3 class="modal-title" id="modalTitle">Título do Incômodo</h3>
-      <div class="modal-body">
-        <p id="modalDescription">Descrição do problema...</p>
-        
-        <div class="modal-section impact-section">
-          <h4>Impacto na Rotina:</h4>
-          <p id="modalImpact">Como isso afeta o dia a dia...</p>
-        </div>
+  <!-- ==================== MODAIS (CSS ONLY) ==================== -->
 
-        <div class="modal-section solution-section">
-          <h4>💡 Dica de Organização da Rita:</h4>
-          <p id="modalSolution">Sugestão prática...</p>
-        </div>
-      </div>
+  <!-- MODAL 1 -->
+  <input type="checkbox" id="modal-1" class="modal-toggle">
+  <div class="modal-overlay">
+    <div class="modal-box">
+      <label for="modal-1" class="btn-close">X</label>
+      <h3>DISTRAÇÕES DIGITAIS</h3>
+      <p class="modal-subtitle-magenta"><strong>Incômodos Identificados:</strong></p>
+      <ul>
+        <li>Checar o celular a cada 5 minutos involuntariamente.</li>
+        <li>Dificuldade em iniciar tarefas longas e complexas.</li>
+        <li>Sensação de culpa ao ver o tempo passar sem produzir.</li>
+      </ul>
+      <p class="modal-subtitle-green"><strong>Diretriz do Computador Irken:</strong></p>
+      <p class="modal-text">Ativar o modo de isolamento do dispositivo (Pomodoro/Bloqueador de apps) e dividir o estudo em blocos de 25 minutos de hiperfoco.</p>
     </div>
   </div>
 
-  <!-- RODAPÉ -->
+  <!-- MODAL 2 -->
+  <input type="checkbox" id="modal-2" class="modal-toggle">
+  <div class="modal-overlay">
+    <div class="modal-box">
+      <label for="modal-2" class="btn-close">X</label>
+      <h3>SOBRECARGA DE TAREFAS</h3>
+      <p class="modal-subtitle-magenta"><strong>Incômodos Identificados:</strong></p>
+      <ul>
+        <li>Sensação contínua de "estar devendo matéria".</li>
+        <li>Não saber por onde começar diante de prazos apertados.</li>
+        <li>Listas de tarefas gigantescas e irrealistas.</li>
+      </ul>
+      <p class="modal-subtitle-green"><strong>Diretriz do Computador Irken:</strong></p>
+      <p class="modal-text">Aplicar a Matriz de Eisenhower. Definir apenas 3 tarefas prioritárias por dia. Eliminar ou adiar tarefas sem urgência real.</p>
+    </div>
+  </div>
+
+  <!-- MODAL 3 -->
+  <input type="checkbox" id="modal-3" class="modal-toggle">
+  <div class="modal-overlay">
+    <div class="modal-box">
+      <label for="modal-3" class="btn-close">X</label>
+      <h3>CANSAÇO E DESORGANIZAÇÃO</h3>
+      <p class="modal-subtitle-magenta"><strong>Incômodos Identificados:</strong></p>
+      <ul>
+        <li>Mesa bagunçada que distrai o foco visual.</li>
+        <li>Sono excessivo e falta de energia durante as leituras.</li>
+        <li>Mudanças constantes de horário que quebram o hábito.</li>
+      </ul>
+      <p class="modal-subtitle-green"><strong>Diretriz do Computador Irken:</strong></p>
+      <p class="modal-text">Criar um ritual de preparação de 5 minutos (limpar a mesa, água do lado) e fixar horários rígidos para descanso/sono.</p>
+    </div>
+  </div>
+
   <footer>
-    <p>Protótipo feito com <span>♥</span> para o Organizador de Estudos da Rita</p>
+    <p>PROTÓTIPO DE DIAGNÓSTICO // IMPÉRIO IRKEN ©</p>
   </footer>
-
-  <!-- SCRIPT JS PARA O MODAL -->
-  <script>
-    function openModal(title, description, impact, solution) {
-      document.getElementById('modalTitle').innerText = title;
-      document.getElementById('modalDescription').innerText = description;
-      document.getElementById('modalImpact').innerText = impact;
-      document.getElementById('modalSolution').innerText = solution;
-      
-      document.getElementById('modalOverlay').classList.add('active');
-    }
-
-    function closeModal() {
-      document.getElementById('modalOverlay').classList.remove('active');
-    }
-
-    function closeModalOnOuterClick(event) {
-      if (event.target.id === 'modalOverlay') {
-        closeModal();
-      }
-    }
-  </script>
 
 </body>
 </html>
